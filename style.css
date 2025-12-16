@@ -1,0 +1,283 @@
+:root {
+    --primary-color: #005b96;
+    /* Deep Medical Blue */
+    --secondary-color: #0081c9;
+    /* Lighter Blue */
+    --accent-color: #28a745;
+    /* Success Green for WhatsApp */
+    --bg-color: #f4f7f6;
+    /* Very light grey/white background */
+    --text-color: #333;
+    --card-bg: #ffffff;
+    --shadow-sm: 0 4px 6px rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 8px 15px rgba(0, 0, 0, 0.1);
+    --radius: 12px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Cairo', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.container {
+    width: 90%;
+    max-width: 800px;
+    /* Constrained width for better readability on desktop */
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* Header */
+.main-header {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: white;
+    padding: 2rem 0;
+    text-align: center;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    margin-bottom: 2rem;
+    box-shadow: var(--shadow-md);
+}
+
+.doctor-identity {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo-icon {
+    font-size: 3rem;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 15px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.main-header h1 {
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+
+.subtitle {
+    font-size: 1.1rem;
+    opacity: 0.9;
+    font-weight: 400;
+}
+
+/* Main Content */
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding-bottom: 2rem;
+}
+
+.card {
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-top: 4px solid var(--primary-color);
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-md);
+}
+
+.card-content {
+    padding: 1.5rem;
+    text-align: center;
+}
+
+h2 {
+    color: var(--primary-color);
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.section-icon {
+    font-size: 1.2rem;
+    color: var(--secondary-color);
+}
+
+/* Specific Section Styles */
+.intro-section p {
+    font-size: 1rem;
+    color: #555;
+    text-align: justify;
+    text-align-last: center;
+}
+
+.address-text {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.map-link {
+    display: inline-block;
+    color: var(--secondary-color);
+    text-decoration: none;
+    font-size: 0.9rem;
+    margin-top: 5px;
+}
+
+.map-link:hover {
+    text-decoration: underline;
+}
+
+/* Hours Table Look */
+.hours-box {
+    background: #f9f9f9;
+    padding: 1rem;
+    border-radius: 8px;
+    display: inline-block;
+    width: 100%;
+}
+
+.day-time {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 0;
+    font-weight: 600;
+}
+
+.divider {
+    height: 1px;
+    background: #e0e0e0;
+    margin: 5px 0;
+}
+
+.day {
+    color: var(--primary-color);
+}
+
+.time {
+    color: #555;
+}
+
+/* Contact Section */
+.contact-section {
+    text-align: center;
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.buttons-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    width: 100%;
+}
+
+.contact-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 700;
+    padding: 12px 25px;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+    flex: 1;
+    min-width: 200px;
+    max-width: 300px;
+}
+
+.whatsapp-btn {
+    background-color: var(--accent-color);
+    box-shadow: 0 4px 15px rgba(40, 167, 69, 0.4);
+}
+
+.whatsapp-btn:hover {
+    background-color: #218838;
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(40, 167, 69, 0.6);
+}
+
+.call-btn {
+    background-color: var(--primary-color);
+    box-shadow: 0 4px 15px rgba(0, 91, 150, 0.4);
+}
+
+.call-btn:hover {
+    background-color: #004475;
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(0, 91, 150, 0.6);
+}
+
+.phone-number {
+    margin-top: 5px;
+    font-size: 0.9rem;
+    color: #777;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* Standard font for numbers */
+}
+
+/* Footer */
+.main-footer {
+    text-align: center;
+    padding: 1.5rem;
+    font-size: 0.8rem;
+    color: #888;
+    margin-top: 2rem;
+    border-top: 1px solid #eee;
+}
+
+/* Responsive */
+@media (min-width: 768px) {
+    main {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+            "intro intro"
+            "location hours"
+            "contact contact";
+    }
+
+    .intro-section {
+        grid-area: intro;
+    }
+
+    .location-section {
+        grid-area: location;
+    }
+
+    .hours-section {
+        grid-area: hours;
+    }
+
+    .contact-section {
+        grid-area: contact;
+    }
+
+    .main-header h1 {
+        font-size: 2.2rem;
+    }
+}
